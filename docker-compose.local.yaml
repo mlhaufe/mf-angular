@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: localhost:5000/nginx:alpine
+    build: ./nginx
+    ports:
+      - "3000:80"
+    depends_on:
+      - shell
+      - app1
+      - app2
+
+  shell:
+    image: localhost:5000/mf-angular-shell # local registry
+    build: ./shell
+    ports:
+      - "3001:80"
+  
+  app1:
+    image: localhost:5000/mf-angular-app1 # local registry
+    build: ./app1
+    ports:
+      - "3002:80"
+  
+  app2:
+    image: localhost:5000/mf-angular-app2 # local registry
+    build: ./app2
+    ports:
+      - "3003:80"
