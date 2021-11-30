@@ -8,7 +8,7 @@ Starting nginx and all team containers
 
     docker-compose -f docker-compose.local.yaml up -d --build
 
-Once everything is build an running you can access the assembled product page via [http://127.0.0.1:3000/](http://127.0.0.1:3000/).
+Once everything is build an running you can access the assembled product page via [http://localhost:3000/](http://localhost:3000/).
 
 ## Running Specific services
 
