@@ -12,19 +12,19 @@ services:
       - app2
 
   shell:
-    image: localhost:5000/mf-angular-shell # local registry
+    image: localhost:5000/mf-angular-shell
     build: ./shell
     ports:
       - "3001:80"
 
   app1:
-    image: localhost:5000/mf-angular-app1 # local registry
+    image: localhost:5000/mf-angular-app1
     build: ./app1
     ports:
       - "3002:80"
 
   app2:
-    image: localhost:5000/mf-angular-app2 # local registry
+    image: localhost:5000/mf-angular-app2
     build: ./app2
     ports:
       - "3003:80"

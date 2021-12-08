@@ -23,7 +23,6 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 ## From 'builder' copy website to default nginx public folder
-
 COPY --from=builder /app/dist/app1 /usr/share/nginx/html
 
 # https://stackoverflow.com/questions/18861300/how-to-run-nginx-within-a-docker-container-without-halting
